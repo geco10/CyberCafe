@@ -2,14 +2,22 @@
 #include<string>
 #include"OSType.h"
 #include"AppType.h"
-class App
+struct AppInfo
 {
-protected:
 	std::string name;
 	AppType app;
 	int byte;
 	OSType os;
+};
+class App
+{
+
+protected:
+	AppInfo info;
+
 public:
-	virtual void play()const = 0;
+
+	AppInfo GetInfo()const;
+	virtual void play()const{};
 };
 
