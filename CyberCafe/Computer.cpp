@@ -15,7 +15,7 @@ void Computer::remove(std::string name)
 
 void Computer::PrintInfo()
 {
-	std::cout << byte << os << apps;
+	std::cout << byte << os << aps;
 }
 
 void Computer::PrintApps()
