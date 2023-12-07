@@ -1,8 +1,9 @@
 #pragma once
 #include"App.h"
-class GamingApp:public App
-{
+namespace Installers {
+	class GamingApp :public App
+	{
 	public:
-	void play()const override;
-};
-
+		void GetInstance()const override;
+	};
+}

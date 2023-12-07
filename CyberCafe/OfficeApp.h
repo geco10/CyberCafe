@@ -1,8 +1,9 @@
 #pragma once
 #include"App.h"
-class OfficeApp :public App
-{
-public:
-	void play()const override;
-};
-
+namespace Installers {
+	class OfficeApp :public App
+	{
+	public:
+		void GetInstance()const override;
+	};
+}

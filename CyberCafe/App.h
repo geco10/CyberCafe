@@ -9,15 +9,17 @@ struct AppInfo
 	int byte;
 	OSType os;
 };
-class App
-{
 
-protected:
-	AppInfo info;
+namespace Installers {
+	class App
+	{
 
-public:
+	protected:
+		AppInfo info;
 
-	AppInfo GetInfo()const;
-	virtual void play()const{};
-};
+	public:
 
+		AppInfo GetInfo()const;
+		virtual void GetInstance()const=0;
+	};
+}
