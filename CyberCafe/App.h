@@ -9,7 +9,16 @@ struct AppInfo
 	int byte;
 	OSType os;
 };
-
+namespace Instance {
+	class App {
+	protected:
+		std::string path;
+		int bytes;
+		OSType os;
+	public:
+		virtual void play ()const = 0;
+	};
+}
 namespace Installers {
 	class App
 	{
@@ -20,6 +29,6 @@ namespace Installers {
 	public:
 
 		AppInfo GetInfo()const;
-		virtual void GetInstance()const=0;
+		virtual Instance::App* GetInstance()const=0;
 	};
 }
