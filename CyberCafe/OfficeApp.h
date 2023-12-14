@@ -4,6 +4,6 @@ namespace Installers {
 	class OfficeApp :public App
 	{
 	public:
-		void GetInstance()const override;
+		Instance::App* GetInstance()const override;
 	};
 }

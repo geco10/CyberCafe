@@ -1,6 +1,4 @@
 #include "App.h"
-
-AppInfo App::GetInfo()const
-{
-    return info;
+AppInfo Installers::App::GetInfo()const{
+  return info;
 }

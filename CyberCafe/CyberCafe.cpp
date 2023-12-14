@@ -1,5 +1,11 @@
 #include <iostream>
+#include"GamingComputer.h"
+#include"GraphicComputer.h"
+#include"OfficeComputer.h"
+#include"App.h"
 int main()
 {
-    std::cout << "Hello World!\n";
+	GraphicComputer comp;
+	comp.PrintInfo();
+	comp.work("Macintosh");
 }

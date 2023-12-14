@@ -4,18 +4,21 @@
 #include"OSType.h"
 #include<string>
 #include<iostream>
-class Computer
-{
-	void PrintApps();
-protected:
+struct ComputerInfo {
 	int byte;
 	OSType os;
-	std::map<std::string,App>apps;
+};
+class Computer
+{
+	void PrintMap();
+protected:
+	ComputerInfo info;
+	std::map<std::string,Instance::App*>apps;
 	virtual void work(std::string name)const = 0;
-	void install(const App& app);
+	void install(const Installers::App& app);
 	void remove(std::string name);
 public:
-
+	ComputerInfo GetInfo();
 	void PrintInfo();
 };
 
