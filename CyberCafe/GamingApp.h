@@ -4,13 +4,13 @@ namespace Installers {
 	class GamingApp :public App
 	{
 	public:
-		Instance::App* GetInstance()const override;
+		Instance::App* GetInstance(std::string path)const override;
 	};
 }
 namespace Instance {
 	class GamingApp :public App
 	{
 	public:
-		virtual Instance::App* GetInstance()const ;
+		void play()const override;
 	};
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include<iostream>
 #include<string>
 #include"OSType.h"
 #include"AppType.h"
@@ -13,9 +14,9 @@ namespace Instance {
 	class App {
 	protected:
 		std::string path;
-		int bytes;
-		OSType os;
+		AppInfo data;
 	public:
+		App(std::string Path,AppInfo Data);
 		virtual void play ()const = 0;
 	};
 }
@@ -29,6 +30,6 @@ namespace Installers {
 	public:
 
 		AppInfo GetInfo()const;
-		virtual Instance::App* GetInstance()const=0;
+		virtual Instance::App* GetInstance(std::string path)const=0;
 	};
 }
