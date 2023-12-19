@@ -2,7 +2,7 @@
 
 void Computer::install(const Installers::App& app)
 {
-	if (app.GetInfo().byte <= byte && app.GetInfo().os == os) {
+	if (app.GetInfo().byte <= info.byte && app.GetInfo().os == info.os) {
 		if (!apps.contains(app.GetInfo().name))
 			apps[app.GetInfo().name] = app.GetInstance();
 		else

@@ -7,3 +7,10 @@ namespace Installers {
 		Instance::App* GetInstance()const override;
 	};
 }
+namespace Instance {
+	class GamingApp :public App
+	{
+	public:
+		virtual Instance::App* GetInstance()const ;
+	};
+}
