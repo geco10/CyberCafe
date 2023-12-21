@@ -14,8 +14,8 @@ class Computer
 protected:
 	ComputerInfo info;
 	std::map<std::string,Instance::App*>apps;
-	virtual void work(std::string name)const = 0;
-	void install(const Installers::App& app);
+	virtual void work(std::string name) = 0;
+	void install(const Installers::App& app,std::string path);
 	void remove(std::string name);
 public:
 	ComputerInfo GetInfo();

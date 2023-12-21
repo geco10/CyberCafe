@@ -1,10 +1,10 @@
 #include "Computer.h"
 
-void Computer::install(const Installers::App& app)
+void Computer::install(const Installers::App& app,std::string path)
 {
 	if (app.GetInfo().byte <= info.byte && app.GetInfo().os == info.os) {
 		if (!apps.contains(app.GetInfo().name))
-			apps[app.GetInfo().name] = app.GetInstance();
+			apps[app.GetInfo().name] =app.GetInstance(path);
 		else
 			throw "-1 application was already downloaded";
 	}

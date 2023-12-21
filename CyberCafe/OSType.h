@@ -6,7 +6,7 @@ enum OSType
 	Samsung,
 	AlienWare
 };
-std::string OsString(OSType os){
+inline std::string OsString(OSType os){
 	switch(os){
 	case OSType::HP:
 		return "HP";

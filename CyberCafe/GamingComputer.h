@@ -3,6 +3,6 @@
 class GamingComputer :public Computer
 {
 public:
-	void work(std::string name)const override;
+	void work(std::string name) override;
 };
 

@@ -5,7 +5,8 @@
 #include"App.h"
 int main()
 {
-	GraphicComputer comp;
+	Installers::
+	OfficeComputer comp;
 	comp.PrintInfo();
 	comp.work("Macintosh");
 }
