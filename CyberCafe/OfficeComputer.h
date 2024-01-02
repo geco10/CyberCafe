@@ -1,5 +1,6 @@
 #pragma once
 #include"Computer.h"
+
 class OfficeComputer :public Computer
 {
 public:
